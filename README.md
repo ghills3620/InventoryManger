@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+Z-Prefix App Requirements
+Below you will find the necessary requirements for the CRUD app you will build, as well as user stories that provide you with the desired behavior for your app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requirements
+Your code must be made available to instructors for grading via the submission link at the end of this section. Instructors should be able to see your front end and back end code.
+Your application must be compatible with the Google Chrome browser
+Your application must use a front-end, back-end, and database
+The database should contain at least two entities, a User and a Item, in a one to many relationship, as shown in the ERD below
+You should style your application in order to lay out components in a sensible way
+You should use the following stories to build out the functionality of your app
 
-## Available Scripts
 
-In the project directory, you can run:
+Rubric
+| Criteria                | Unacceptable                                 | Beginning                                      | Developing                                    | Acceptable                                    | Exceptional                                  |
+|-------------------------|----------------------------------------------|------------------------------------------------|-----------------------------------------------|-----------------------------------------------|----------------------------------------------|
+| User Interface          | There is no User Interface                   | Simple UI                                      | Matches layout specified                      | User can create and see their resource        | Fully matches specified functionality        |
+| App-Server Communication | There is no API Call                         | Calls are made but does not fully communicate with API | Communicates w/API by responding to call       | Full communication is laid out at least partially correctly, not just the first GET request | Communicates w/API correctly                   |
+| Server                  | There is no server                          | Server exists without a GET route               | Server exists and has GET route                | Has multiple GET routes, has POST route        | Has GET, PUT/PATCH, POST, DELETE routes        |
+| DB Interaction (Read & write) | There is no DB                           | DB exists                                     | DB & server communicate at all, DB contains dummy data | DB can store posts, can add new posts           | DB can perform all CRUD operations              |
+| Authentication          | There is no authentication                  | A user can create an account                   | A user can log in                             | A user can see information specific to them    | Fully matches specified functionality        |
 
-### `npm start`
+Stories
+As an inventory manager I want to be able to create an account so that I can track my inventory.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As an inventory manager I want to be able to log into my account so that I can see my inventory of items.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+After logging in, the inventory manager should be redirected to their inventory of items.
+As an inventory manager I want to be able to create a new item so that I can share my item details with the world.
 
-### `npm test`
+After the item is created, the inventory manager should be redirected to their inventory of items.
+An item displays name, description, and quantity.
+As an inventory manager I want to be able to see a my entire inventory of items.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The inventory of items should display the first 100 characters of each item description, with “...” at the end if the description is longer than 100 characters.
+As an inventory manager I want to be able to see any individual item I have added.
 
-### `npm run build`
+The full item information should be displayed.
+As an inventory manager I want to be able to edit an item so that I can fix any mistakes I made creating it.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When the user toggles edit mode, the page remains the same and the fields become editable.
+As an inventory manager I want to be able to delete an item so that I can remove any unwanted content.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the user deletes the item they should be redirected to their inventory of items.
+As a visitor, who is not logged in, I want to be able to view all items created by every inventory manager so that I can browse every item.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Unauthenticated users should be able to view all items, and any single item.
+The items should only display the first 100 characters of its description with “...” at the end if it is longer than 100 characters.
+As a visitor, who is not logged in, I want to be able to view a specific item created by any user so that I can see all of its details.
 
-### `npm run eject`
+Unauthenticated users should be able to view all items, and any single item.
+As an inventory manager I want to be able to view all items created by every inventory manager so that I can browse every item.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Unauthenticated users should be able to view all items, and any single item.
+Entity Relationship Diagram
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
